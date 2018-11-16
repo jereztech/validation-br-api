@@ -63,7 +63,7 @@ Because it's standard by the Central Bank of Brazil, the ContaCorrente field can
   @ContaCorrente(mod11Aliases = { @Mod11Alias(alias = 'X', regexp = "[0-9]{4,11}") })
   private String contaCorrente;
 ```
-Why? Because Banco do Brasil use a X character as part of the ContaCorrente field, and the max length for this field is 11.
+Why? Because Banco do Brasil use an X character as part of the ContaCorrente checksum, and the max length for this field is 11.
 This logic is applied to AgenciaBancaria field in the same way.
 
 ## Maven
@@ -82,7 +82,7 @@ This logic is applied to AgenciaBancaria field in the same way.
 
 ## FAQ
 ### How can I validate my Value Object coming from the front-end?
-The fastest way is using the @javax.validation.Valid annotation with your Value Object. The @javax.validation.Valid annotation marks a method parameter for validation cascading (applied recursively). Constraints defined on the object and its properties are be validated when the method parameter is validated. If the validation does not succeed, a HTTP 400 Bad Request error is generated. For example:
+The fastest way is using the @javax.validation.Valid annotation with your Value Object. The @javax.validation.Valid annotation marks a method parameter for validation cascading (applied recursively). Constraints defined on the object and its properties are be validated when the method parameter is validated. If the validation does not succeed, an HTTP 400 Bad Request error is generated. For example:
 ```
   @PutMapping(path = "/saveDataBr")
   public ResponseEntity<DataBrVO> saveDataBr(@RequestBody @Valid DataBrVO dataBrVO) {}
