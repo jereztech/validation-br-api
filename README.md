@@ -88,19 +88,15 @@ The fastest way is using the @javax.validation.Valid annotation with your Value 
   public ResponseEntity<DataBrVO> saveDataBr(@RequestBody @Valid DataBrVO dataBrVO) {}
 ```
 ### How can I implement my Value Object to use these annotations?
-An excellent choice is JAXB, which allows the most used formats such as XML and JSON. For example:
+Working with legacy, an excellent choice is JAXB which allows the most used formats such as XML and JSON. Jackson API is good as well in the most modern architectures. For example:
 ```
-  @XmlRootElement
-  @XmlAccessorType(XmlAccessType.FIELD)
   public class DataBrVO {
   
     @CPF
     @NotNull //you can use another annotations from the javax.validation.constraints package
-    @XmlAttribute
     private String cpf;
     
     @Valid //validation applied recursively
-    @XmlElement
     private OtherDataBrVO otherDataBrVO;
     
   }
