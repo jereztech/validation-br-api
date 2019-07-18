@@ -12,9 +12,7 @@ Brazilian Personal Data Validation API compatible with the Java Bean Validation 
 
 [![Maven Central](https://img.shields.io/maven-central/v/com.jereztech/validation-br-api.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.jereztech%22%20AND%20a:%22validation-br-api%22)
 [![License-GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl.html)
-![build-passing](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat)
 ![contributions-welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
-[![Donate-PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=joel%2ejerez%40jereztech%2ecom&lc=BR&item_name=Joel%20Jerez&item_number=DONATION&currency_code=BRL&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 ## Overview
 Some identification numbers in Brazil use check digits to guarantee the document authenticity. This API helps you to validate Brazilian Personal Data according to official regulations. Most institutions use standardized masks in these documents to improve the user experience, to facilitate programming, it's possible to validate the data with or without masks. The code is based on annotations and can be used easily.
